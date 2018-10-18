@@ -11,5 +11,4 @@ int main() {
     int result = calculator.process_formula(formula);
     std::cout << "The result is:\n";
     std::cout <<  result << std::endl;
-    system("pause");
 }

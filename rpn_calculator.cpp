@@ -8,13 +8,13 @@
 
 operation* rpn_calculator::operation_type(int operation) {
     switch(operation) {
-        case ADDITION_CODE : return new addition_operation();
+        case addition_operation::ADDITION_CODE : return new addition_operation();
 
-        case SUBTRACTION_CODE : return new subtraction_operation();
+        case subtraction_operation::SUBTRACTION_CODE : return new subtraction_operation();
 
-        case MULTIPLICATION_CODE : return new multiplication_operation();
+        case multiplication_operation::MULTIPLICATION_CODE : return new multiplication_operation();
 
-        case DIVISION_CODE : return new division_operation();
+        case division_operation::DIVISION_CODE : return new division_operation();
 
         default : throw "Invalid operator in formula.";
     }
@@ -39,7 +39,9 @@ int rpn_calculator::process_formula(std::string formula) {
         if(iss2 >> n) {
             stack.push(n);
         } else {
-            perform(operation_type(operand[0]));
+            operation* p = operation_type(operand[0]);
+            perform(p);
+            delete p;
         }
     }
 

@@ -7,14 +7,13 @@
 
 #include "abstract_operation.hpp"
 
-static const char MULTIPLICATION_CODE{'*'}; // char for multiplication
-
 /*
  * A multiplication operation. See abstract_operation.hpp.
  */
 class multiplication_operation : public abstract_operation {
 
 public:
+    static const char MULTIPLICATION_CODE{'*'}; // char for multiplication
     /*
      * See abstract_operation.hpp.
      */

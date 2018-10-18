@@ -7,14 +7,13 @@
 
 #include "abstract_operation.hpp"
 
-static const char DIVISION_CODE{'/'}; // char for division
-
 /*
  * A division operation. See abstract_operation.hpp.
  */
 class division_operation : public abstract_operation {
 
 public:
+    static const char DIVISION_CODE{'/'}; // char for division
     /*
      * See abstract_operation.hpp.
      */

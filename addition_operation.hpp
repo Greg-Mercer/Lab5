@@ -7,14 +7,13 @@
 
 #include "abstract_operation.hpp"
 
-static const char ADDITION_CODE{'+'}; // char for addition
-
 /*
  * An addition operation. See abstract_operation.hpp.
  */
 class addition_operation : public abstract_operation {
 
 public:
+    static const char ADDITION_CODE{'+'}; // char for addition
     /*
      * See abstract_operation.hpp.
      */
