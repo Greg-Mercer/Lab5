@@ -7,13 +7,25 @@
 
 #include "abstract_operation.hpp"
 
-static const char SUBTRACTION_CODE{'-'};
+static const char SUBTRACTION_CODE{'-'}; // char for subtraction
 
+/*
+ * A subtraction operation. See abstract_operation.hpp.
+ */
 class subtraction_operation : public abstract_operation {
 
 public:
+    /*
+     * See abstract_operation.hpp.
+     */
     subtraction_operation() : abstract_operation(SUBTRACTION_CODE) { };
+    /*
+     * See operation.hpp.
+     */
     int perform(int x, int y) override {return x - y;};
+    /*
+     * Destroys this subtraction_operation.
+     */
     virtual ~subtraction_operation() { };
 };
 

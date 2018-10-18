@@ -7,13 +7,25 @@
 
 #include "abstract_operation.hpp"
 
-static const char DIVISION_CODE{'/'};
+static const char DIVISION_CODE{'/'}; // char for division
 
+/*
+ * A division operation. See abstract_operation.hpp.
+ */
 class division_operation : public abstract_operation {
 
 public:
+    /*
+     * See abstract_operation.hpp.
+     */
     division_operation() : abstract_operation(DIVISION_CODE) { };
+    /*
+     * See operation.hpp.
+     */
     int perform(int x, int y) override {return x / y;};
+    /*
+     * Destroys this division_operation.
+     */
     virtual ~division_operation() { };
 };
 
