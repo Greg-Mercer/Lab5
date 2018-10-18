@@ -1,13 +1,15 @@
 #include <iostream>
 
-#include "operation.hpp"
-#include "abstract_operation.hpp"
-#include "addition_operation.hpp"
-#include "subtraction_operation.hpp"
-#include "multiplication_operation.hpp"
-#include "division_operation.hpp"
+#include "rpn_calculator.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    std::cout << "Enter your formula:\n";
+    std::string formula;
+    std::getline(std::cin, formula);
+    std::cout << "You entered " << formula << std::endl;
+    rpn_calculator calculator;
+    int result = calculator.process_formula(formula);
+    std::cout << "The result is:\n";
+    std::cout <<  result << std::endl;
+    system("pause");
 }

@@ -7,8 +7,8 @@
 
 class operation {
 public:
-    virtual char get_code();
-    virtual int perform(int x, int y);
+    virtual char get_code() = 0;
+    virtual int perform(int x, int y) = 0;
     virtual ~operation() { };
 };
 

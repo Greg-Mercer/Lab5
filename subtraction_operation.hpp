@@ -7,13 +7,14 @@
 
 #include "abstract_operation.hpp"
 
+static const char SUBTRACTION_CODE{'-'};
+
 class subtraction_operation : public abstract_operation {
 
 public:
-    static const char SUBTRACTION_CODE{'-'};
     subtraction_operation() : abstract_operation(SUBTRACTION_CODE) { };
     int perform(int x, int y) override {return x - y;};
     virtual ~subtraction_operation() { };
 };
 
-#endif //LAB5_ADDITION_OPERATION_HPP
+#endif //LAB5_SUBTRACTION_OPERATION_HPP

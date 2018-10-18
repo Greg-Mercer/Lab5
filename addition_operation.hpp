@@ -7,10 +7,11 @@
 
 #include "abstract_operation.hpp"
 
+static const char ADDITION_CODE{'+'};
+
 class addition_operation : public abstract_operation {
 
 public:
-    static const char ADDITION_CODE{'+'};
     addition_operation() : abstract_operation(ADDITION_CODE) { };
     int perform(int x, int y) override {return x + y;};
     virtual ~addition_operation() { };
